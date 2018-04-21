@@ -18,6 +18,9 @@ module rec Camera:
 
 module rec WebGLRenderer:
     sig
-        type t
+        class type _webGLRenderer = object
+            method setSize: int -> int -> unit
+        end [@bs]
+        type t = _webGLRenderer Js.t
         external make: unit -> t = "WebGLRenderer" [@@bs.new] [@@bs.module "THREE"] 
     end = WebGLRenderer

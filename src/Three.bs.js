@@ -21,7 +21,7 @@ Caml_module.update_mod([[[[0]]]], Camera, Camera);
 
 var WebGLRenderer = Caml_module.init_mod([
       "/Users/divertise/Dev/digitake.github.io/bs-three/src/Three.ml",
-      23,
+      26,
       10
     ], [[0]]);
 

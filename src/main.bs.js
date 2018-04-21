@@ -5,7 +5,21 @@ var THREE = require("THREE");
 
 console.log("Three.js BuckleScript binding r1");
 
-var ratio = 400.0 / 400.0;
+var partial_arg = document;
+
+function createDiv() {
+  return partial_arg.createElement("div");
+}
+
+var mainDiv = document.getElementById("main");
+
+var newDiv = createDiv(/* () */0);
+
+newDiv.textContent = "HEllo test";
+
+mainDiv.appendChild(newDiv);
+
+var ratio = window.innerWidth / window.innerHeight;
 
 var scene = new THREE.Scene();
 
@@ -13,6 +27,11 @@ var camera = new THREE.PerspectiveCamera(45.0, ratio, 1.0, 1000.0);
 
 var renderer = new THREE.WebGLRenderer();
 
+renderer.setSize(window.innerWidth, window.innerHeight);
+
+exports.createDiv = createDiv;
+exports.mainDiv = mainDiv;
+exports.newDiv = newDiv;
 exports.ratio = ratio;
 exports.scene = scene;
 exports.camera = camera;

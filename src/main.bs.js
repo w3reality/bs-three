@@ -2,6 +2,7 @@
 'use strict';
 
 var THREE = require("THREE");
+var Caml_format = require("bs-platform/lib/js/caml_format.js");
 
 console.log("Three.js BuckleScript binding r1");
 
@@ -29,6 +30,24 @@ var renderer = new THREE.WebGLRenderer();
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
+mainDiv.appendChild(renderer.domElement);
+
+var geometry = new THREE.BoxGeometry(1, 1, 1);
+
+var material = new THREE.MeshBasicMaterial({
+      color: Caml_format.caml_int_of_string("0x00ff00")
+    });
+
+var cube = new THREE.Mesh(geometry, material);
+
+scene.add(cube);
+
+cube.rotation.x = 10.0;
+
+camera.position.z = 5.0;
+
+renderer.render(scene, camera);
+
 exports.createDiv = createDiv;
 exports.mainDiv = mainDiv;
 exports.newDiv = newDiv;
@@ -36,4 +55,7 @@ exports.ratio = ratio;
 exports.scene = scene;
 exports.camera = camera;
 exports.renderer = renderer;
+exports.geometry = geometry;
+exports.material = material;
+exports.cube = cube;
 /*  Not a pure module */

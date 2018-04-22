@@ -3,31 +3,82 @@
 
 var Caml_module = require("bs-platform/lib/js/caml_module.js");
 
-var Scene = Caml_module.init_mod([
+var $$Math = Caml_module.init_mod([
       "/Users/divertise/Dev/digitake.github.io/bs-three/src/Three.ml",
-      6,
-      10
+      16,
+      6
+    ], [[[[0]]]]);
+
+Caml_module.update_mod([[[[0]]]], $$Math, $$Math);
+
+var Vector3 = Caml_module.init_mod([
+      "/Users/divertise/Dev/digitake.github.io/bs-three/src/Three.ml",
+      27,
+      6
     ], [[0]]);
 
-Caml_module.update_mod([[0]], Scene, Scene);
+Caml_module.update_mod([[0]], Vector3, Vector3);
 
 var Camera = Caml_module.init_mod([
       "/Users/divertise/Dev/digitake.github.io/bs-three/src/Three.ml",
-      16,
-      10
+      39,
+      6
     ], [[[[0]]]]);
 
 Caml_module.update_mod([[[[0]]]], Camera, Camera);
 
+var Geometry = Caml_module.init_mod([
+      "/Users/divertise/Dev/digitake.github.io/bs-three/src/Three.ml",
+      48,
+      6
+    ], [[[[0]]]]);
+
+Caml_module.update_mod([[[[0]]]], Geometry, Geometry);
+
+var Material = Caml_module.init_mod([
+      "/Users/divertise/Dev/digitake.github.io/bs-three/src/Three.ml",
+      58,
+      6
+    ], [[[[0]]]]);
+
+Caml_module.update_mod([[[[0]]]], Material, Material);
+
+var Mesh = Caml_module.init_mod([
+      "/Users/divertise/Dev/digitake.github.io/bs-three/src/Three.ml",
+      68,
+      6
+    ], [[
+        0,
+        0
+      ]]);
+
+Caml_module.update_mod([[
+        0,
+        0
+      ]], Mesh, Mesh);
+
+var Scene = Caml_module.init_mod([
+      "/Users/divertise/Dev/digitake.github.io/bs-three/src/Three.ml",
+      77,
+      6
+    ], [[0]]);
+
+Caml_module.update_mod([[0]], Scene, Scene);
+
 var WebGLRenderer = Caml_module.init_mod([
       "/Users/divertise/Dev/digitake.github.io/bs-three/src/Three.ml",
-      26,
-      10
+      88,
+      6
     ], [[0]]);
 
 Caml_module.update_mod([[0]], WebGLRenderer, WebGLRenderer);
 
-exports.Scene = Scene;
+exports.$$Math = $$Math;
+exports.Vector3 = Vector3;
 exports.Camera = Camera;
+exports.Geometry = Geometry;
+exports.Material = Material;
+exports.Mesh = Mesh;
+exports.Scene = Scene;
 exports.WebGLRenderer = WebGLRenderer;
-/* Scene Not a pure module */
+/* Math Not a pure module */

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "clean": "bsb -clean-world",
-    "build": "bsb -make-world",
+    "build": "bsb -make-world -w",
     "watch": "webpack -w"
   },
   "keywords": [

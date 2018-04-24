@@ -5,7 +5,7 @@ module.exports = [{
   entry: './src/main.bs.js',
   output: {
     path: __dirname + '/build',
-    filename: 'bundle.js',
+    filename: 'bs-three.js',
   },
   mode: "development",
   devtool: "source-map",
@@ -14,7 +14,7 @@ module.exports = [{
   entry: './src/main.bs.js',
   output: {
     path: __dirname + '/docs',
-    filename: 'bundle.js',
+    filename: 'bs-three.js',
   },
   mode: "production"
 }];

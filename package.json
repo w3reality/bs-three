@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "clean": "bsb -clean-world",
-    "build": "bsb -make-world -w",
-    "watch": "webpack -w"
+    "watch": "bsb -make-world -w",
+    "build": "webpack -p -w"
   },
   "keywords": [
     "BuckleScript",

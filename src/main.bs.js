@@ -16,10 +16,6 @@ var mainDiv = document.getElementById("main");
 
 var newDiv = createDiv(/* () */0);
 
-newDiv.textContent = "HEllo test";
-
-mainDiv.appendChild(newDiv);
-
 var ratio = window.innerWidth / window.innerHeight;
 
 var scene = new THREE.Scene();

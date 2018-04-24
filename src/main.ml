@@ -15,9 +15,6 @@ let mainDiv = getElementById "main"
 
 
 let newDiv = createDiv ()
-let _ = textContent newDiv "HEllo test"
-let _ = appendChild mainDiv newDiv
-
 
 let ratio = (float_of_int width) /. (float_of_int height)
 

@@ -9,5 +9,12 @@ module.exports = [{
   },
   mode: "development",
   devtool: "source-map",
+}, {
+  name: "demo",
+  entry: './src/main.bs.js',
+  output: {
+    path: __dirname + '/docs',
+    filename: 'bundle.js',
+  },
+  mode: "production"
 }];
-

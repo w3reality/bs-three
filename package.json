@@ -5,7 +5,7 @@
     "clean": "bsb -clean-world",
     "watch": "bsb -make-world -w",
     "build": "webpack -p -w",
-    "start:dev": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --open"
   },
   "keywords": [
     "BuckleScript",

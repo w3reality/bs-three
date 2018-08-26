@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const path = require("path");
 
 module.exports = [{
   name: "bundle",
@@ -9,6 +10,10 @@ module.exports = [{
   },
   mode: "development",
   devtool: "source-map",
+  devServer: {
+    contentBase: path.join(__dirname, 'test'),
+    compress: true,
+  }
 }, {
   name: "demo",
   entry: './src/main.bs.js',
@@ -17,4 +22,5 @@ module.exports = [{
     filename: 'bs-three.js',
   },
   mode: "production"
-}];
+},
+];

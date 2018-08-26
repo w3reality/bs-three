@@ -63,7 +63,7 @@ sig
         method rotation: Math.Euler.t
     end [@bs]
     type t = _mesh Js.t
-    external rotate: Mesh.t -> Vector3.t -> float -> Mesh.t = "setRotationFromAxisAngle" [@@bs.send]
+    external rotate: Mesh.t -> Vector3.t -> float -> unit = "setRotationFromAxisAngle" [@@bs.send]
     external make: Geometry.t -> Material.t -> Mesh.t = "Mesh" [@@bs.new] [@@bs.module "THREE"] 
 end = Mesh
 
@@ -73,7 +73,8 @@ sig
         method add: Mesh.t -> unit
     end [@bs] 
     type t = _scene Js.t
-    external make : unit -> Scene.t = "Scene" [@@bs.new] [@@bs.module "THREE"] 
+    external make: unit -> Scene.t = "Scene" [@@bs.new] [@@bs.module "THREE"] 
+    external add: t -> Mesh.t -> unit = "" [@@bs.send]
 end = Scene 
 
 module rec WebGLRenderer:

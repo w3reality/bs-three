@@ -1,16 +1,19 @@
 
 
-# Build
+# To install and run a quick demo
+
+```
+npm install
+npm run dev
+```
+
+# Build a javascript bundle
 ```
 npm run build
 ```
 
-# Watch
+# Watch and dev on ReasonML
 
 ```
 npm run watch
 ```
-
-
-# Editor
-If you use `vscode`, Press `Windows + Shift + B` it will build automatically

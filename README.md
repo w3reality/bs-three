@@ -12,7 +12,7 @@ npm run dev
 npm run build
 ```
 
-# Watch and dev on ReasonML
+# Watch and dev on OCaml/ReasonML(BuckleScript)
 
 ```
 npm run watch

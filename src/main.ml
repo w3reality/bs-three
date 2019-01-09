@@ -1,6 +1,7 @@
 let _ = Js.log "Three.js BuckleScript binding r1"
 
 open Three
+open PromiseMonad
 
 type document
 type element = Dom.element
@@ -48,7 +49,7 @@ let render renderer t =
 
 let angle = ref 0.0
 let rec animate timestamp =
-    Js.log(!angle);
+    (* Js.log(!angle); *)
     render renderer !angle;
     (* vv##x = !angle /. 3.141 *)
     (* vv##y = (3.141 - !angle) /. 3.141 *)
